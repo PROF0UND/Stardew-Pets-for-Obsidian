@@ -1,1 +1,1 @@
-export const PLUGIN_ID = "Stardew-Pets-for-Obsidian";
+export const PLUGIN_ID = "Stardew-Pet-Farm";
