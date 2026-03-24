@@ -64,8 +64,11 @@ export default class StardewPetsPlugin extends Plugin {
             id: 'open-stardew-view',
             name: 'Open Stardew Animals',
             callback: () => {
-                this.app.workspace.getLeaf(true).setViewState({ type: VIEW_TYPE_STARDEW });
+                const leaf = this.app.workspace.getLeftLeaf(true);
+                leaf.setViewState({ type: VIEW_TYPE_STARDEW, active: true });
+                this.app.workspace.revealLeaf(leaf);
             }
+
         });
 
         // Command to add pet
